@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body,
+        html {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .modal-container {
+            display: none;
+            z-index: 999;
+            background-color: #292121f6;
+            padding: 0;
+            box-sizing: content-box;
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        h1 {
+           
+            text-align: center;
+            color: #05020282;
+            cursor: pointer;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+        }
+
+        h1:hover {
+            color: #0c0303;
+            text-shadow: 2px 2px 5px #a8a8a8;
+        }
+        .titleBack{
+            height: 10%;
+        }
+        .image_slide{
+            height: 100%;
+            width: 100%;
+        }
+        .freak{
+          border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #04AA6D;
+  color: green
+        }
+  .freak:hover {
+  background-color: #04AA6D;
+  color: white;}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vinton Real Estate</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/site.webmanifest">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cold.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/cold.js"></script>
+</head>
+
+
+<body>
+  <nav>
+    <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Property</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    </nav>
+    
+<div class="side" style="padding: auto; margin-top: 1%;">
+<div class="row">
+  <div class="main">
+    <h2>FRONT VIEW OF THE HOUSE</h2>
+    <h5>On Sale as at 29 January, 2024</h5>
+    <div style="margin-bottom: 1%;"><div class="modal-container" >
+      <div class="titleBack"><h1 onclick="close_modal_box()" style="text-align: right;padding-right:50px;">&#215;</h1></div>
+      <div style="height: 80%;width: 100%;display: inline-flex;padding: 40px;box-sizing: border-box;">
+          <div style="width: 20%;height: 100%;display: flex;justify-content: center;align-items: center;">
+              <h1 onclick="prevImage()"> &#10096;</h1>
+          </div>
+          <div style="width:fill-available;height: 100%; background-color: rgba(22, 179, 5, 0.975);flex-grow: 1;display: flex;">
+           <img src="1/2.jpg" class="image_slide" style="margin: auto;" />
+          </div>
+          <div style="width: 20%;height: 100%;display: flex;justify-content: center;align-items: center;">
+              <h1 onclick="nextImage()"> &#10097</h1>
+          </div>
+      </div>
+  </div>
+  <div class=>
+    <div onclick="open_modal_box()" style="width:90%;">
+      <img src="1/1.jpg" alt="" style=" margin-bottom:1%; width: auto height:25px;">
+      <button style="border: #aa4242;" class="freak">Click To View More</button>
+    </div>
+  </div>
+    <p>A 3-bedroom house offers a comfortable and versatile living space that caters to the needs of individuals, couples, and families alike. This type of house provides a balance between functionality and flexibility, allowing for ample living space while maintaining a cozy and inviting atmosphere. Here's a description of a typical 3-bedroom house:
+      Upon entering the house, you are greeted by a welcoming foyer that leads you into the main living area. The open-concept design seamlessly connects the living room, dining area, and kitchen, creating a spacious and inclusive environment for both everyday living and entertaining guests.</p>
+    <br>
+  </div>
+  <div class="side">
+    <h2>You can talk to us</h2>
+    <div class="col-12 col-lg-8">
+      <div class="contact-form">
+          <form action="#" method="post">
+              <div class="form-group">
+                  <input type="text" class="form-control" name="text" id="contact-name" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                  <input type="number" class="form-control" name="number" id="contact-number" placeholder="Your Phone">
+              </div>
+              <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="contact-email" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                  <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+              </div>
+              <button type="submit" class="btn south-btn">Send Message</button>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+ </div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 5</div>
+      <img src="1/11.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 5</div>
+      <img src="1/1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 5</div>
+      <img src="1/12.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 5</div>
+      <img src="1/13.jpg" style="width:100%">
+    </div>
+    <!-- <div class="mySlides">
+      <div class="numbertext">5 / 5</div>
+      <img src="1/9.jpg" style="width:100%">
+    </div> -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script>
+
+  var imageLength = 12;
+  var currentImage = 1;
+  var image_container =document.querySelector(".image_slide");
+  function open_modal_box() {
+      document.querySelector(".modal-container").style.display = "block";
+
+  }
+
+  function close_modal_box() {
+      document.querySelector(".modal-container").style.display = "none";
+  }
+
+  function nextImage() {
+      if (currentImage <imageLength){
+          currentImage=currentImage+1;
+          image_container.src = `1/${currentImage}.jpg`;
+          console.log(currentImage);
+      }else{
+          currentImage=1;
+          image_container.src = `1/${currentImage}.jpg`;
+          console.log(currentImage);
+      }
+     
+  }
+  function prevImage() {
+      if (currentImage> 1){
+          currentImage=currentImage-1;
+          image_container.src = `1/${currentImage}.jpg`;
+          console.log(currentImage);
+      }else{
+          currentImage=4;
+          image_container.src = `1/${currentImage}.jpg`;
+          console.log(currentImage);
+      }
+     
+  }
+</script>
+
+</html>
